@@ -29,4 +29,4 @@ After building these models and comparing their performance we will select the m
 - **Notebook: `DeepLearningDatasetPreparation.ipynb`**
   - Process the selected signals to detect heartbeats and extract blood pressure values.
   - Compile the features into a structured DataFrame, ready for input into our models.
-  - Finally as a baseline comparison we also implement a Random Forest Classifer. **Notebook: `DeepLearningDatasetPreparation.ipynb`**
+  - Finally as a baseline comparison we also implement a Random Forest Classifer. **Notebook: `Random_forest_classifier.ipynb`**
