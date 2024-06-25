@@ -10,11 +10,12 @@ We will be using a 3 part process to indicated a critically ill patient using PP
 Heart Beat Detection from the PPG signals
 Extracting the Blood pressure values from ABP signals
 Using Deep Learning models with the extracted data to classify input values as critically ill based on shock index (SI).
-For the model building we have decided to go ahead with the following 3 approaches:
 
-Self tuned DNN.
-DNN with keras tuner.
-Random forest classifier.
+For the model building we have decided to go ahead with the following 3 approaches:
+-Self tuned DNN.
+-DNN with keras tuner.
+-Random forest classifier.
+
 After building these models and comparing their performance we will select the model with highest train and test accuracy thus fitting our use case.
 
 
