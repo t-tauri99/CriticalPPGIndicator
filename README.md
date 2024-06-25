@@ -1,30 +1,33 @@
 # CriticalPPGIndicator
 
-**Objective:**
-Photoplethysmography(PPG) signal to indicate a critically ill patient.
+## Objective:
+Photoplethysmography(PPG) signal to indicate a critically ill patient. Cardiovascular diseases (CVDs) have become a major contributor to human mortality. Therefore, early diagnosis, treatment, and control of hypertension could play an important role in the prevention and treatment of CVDs. The objective of our project is to design a model for classification of Photoplethysmography (PPG) signal to detect an elevated shock index which can indicate a critically ill patient. 
 
-Cardiovascular diseases (CVDs) have become a major contributor to human mortality. Therefore, early diagnosis, treatment, and control of hypertension could play an important role in the prevention and treatment of CVDs. The objective of our project is to design a model for classification of Photoplethysmography (PPG) signal to detect an elevated shock index which can indicate a critically ill patient. 
+## Methodology
+Our approach utilizes a three-part process to analyze PPG signals and predict critical illness:
 
-We will be using a 3 part process to indicated a critically ill patient using PPG signals:
+1. **Heart Beat Detection**: Identify cardiac cycles from the PPG signals to determine heart rate.
+2. **Blood Pressure Extraction**: Analyze arterial blood pressure (ABP) signals to extract systolic and diastolic values.
+3. **Deep Learning Classification**: Apply advanced modeling techniques to classify the extracted features according to the shock index, determining the likelihood of critical illness.
 
-Heart Beat Detection from the PPG signals
-Extracting the Blood pressure values from ABP signals
-Using Deep Learning models with the extracted data to classify input values as critically ill based on shock index (SI).
-
-For the model building we have decided to go ahead with the following 3 approaches:
--Self tuned DNN.
--DNN with keras tuner.
--Random forest classifier.
+## Model Building Approaches
+To achieve our objective, we are experimenting with three distinct modeling techniques:
+- **Self-Tuned Deep Neural Network (DNN)**
+- **DNN with Keras Tuner**
+- **Random Forest Classifier**
 
 After building these models and comparing their performance we will select the model with highest train and test accuracy thus fitting our use case.
 
+## Workflow
 
-We first use the records_suitable_for_analysis.ipynb to analyse and choose the suitable records of the signals of each patient. We chack for missing signals and making sure each 
-signal is atleast 2 minutes long so that its suitable for analysis.
+### Data Analysis and Record Selection
+- **Notebook: `records_suitable_for_analysis.ipynb`**
+  - Analyze patient records to identify suitable PPG and ABP signals.
+  - Ensure each signal is at least 2 minutes long and free from significant gaps or artifacts, making them viable for detailed analysis.
 
-We then move on to DeepLearningDatasetPreparation.ipynb where we do analysis on the suitable signals to detect the heart beat and the blood pressure and then write those features into
-a dataframe for further use in modeling.
-
-Now we finally start with the Neural networks by using DNN.ipynb where we implement a self tuned DNN and a Hyperparameter-tuned DNN.
+### Feature Extraction and Dataset Preparation
+- **Notebook: `DeepLearningDatasetPreparation.ipynb`**
+  - Process the selected signals to detect heartbeats and extract blood pressure values.
+  - Compile the features into a structured DataFrame, ready for input into our machine learning models.
 
 Finally as a baseline comparison we also implement a machine learning model ( Random Forest Classifer) using the Random_forest_classifier.ipynb.
