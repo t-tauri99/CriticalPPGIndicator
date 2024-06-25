@@ -1,6 +1,6 @@
 # CriticalPPGIndicator
 
-## Objective:
+## Objective
 Photoplethysmography(PPG) signal to indicate a critically ill patient. Cardiovascular diseases (CVDs) have become a major contributor to human mortality. Therefore, early diagnosis, treatment, and control of hypertension could play an important role in the prevention and treatment of CVDs. The objective of our project is to design a model for classification of Photoplethysmography (PPG) signal to detect an elevated shock index which can indicate a critically ill patient. 
 
 ## Methodology
@@ -28,6 +28,5 @@ After building these models and comparing their performance we will select the m
 ### Feature Extraction and Dataset Preparation
 - **Notebook: `DeepLearningDatasetPreparation.ipynb`**
   - Process the selected signals to detect heartbeats and extract blood pressure values.
-  - Compile the features into a structured DataFrame, ready for input into our machine learning models.
-
-Finally as a baseline comparison we also implement a machine learning model ( Random Forest Classifer) using the Random_forest_classifier.ipynb.
+  - Compile the features into a structured DataFrame, ready for input into our models.
+  - Finally as a baseline comparison we also implement a Random Forest Classifer. **Notebook: `DeepLearningDatasetPreparation.ipynb`**
